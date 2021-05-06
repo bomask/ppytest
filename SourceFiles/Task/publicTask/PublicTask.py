@@ -1,10 +1,12 @@
-from selenium import webdriver
-from Object.PublicObject import PublicObject
 
+from selenium import webdriver
+import sys
+sys.path.append('F:\\ppytestNew\\SourceFiles')
+from Object import PublicObject
 
 class PublicTask:
     def __init__(self):
-        self.public_o = PublicObject()
+        self.public_o = PublicObject.PublicObject()
 
     def sendKeys(self, type, element_path, key_words):
         if type.upper() == "name":
@@ -32,3 +34,6 @@ class PublicTask:
 
     def openBrowser(self, url=None):
         self.public_o.driver.get(url)
+
+
+

@@ -1,10 +1,18 @@
-import time
+import sys
+sys.path.append('F:\\ppytestNew\\SourceFiles\\Task\\publicTask')
+
+from PublicTask import PublicTask
 import pytest
-from SourceFiles.Task.publicTask.PublicTask import PublicTask
+import time
+
+
+def setup_module():
+    print("111111111111111111111")
 
 
 def test_a_smoke():
     x = PublicTask()
     time.sleep(2)
     print("hello!")
-    x.openBrowser("https://www.baidu.com")
+    x = PublicTask()
+    x.openBrowser("http://www.baidu.com")
